@@ -2,8 +2,17 @@ package io.javabrains.parkinglot.vehicles;
 
 public abstract class Vehicle {
 
-    VehicleType vehicleType;
+    private VehicleType vehicleType;
     private boolean isHandicapped;
+    private int parkingTimeMinutes;
+
+    public int getParkingTimeMinutes() {
+        return parkingTimeMinutes;
+    }
+
+    public void setParkingTimeMinutes(int parkingTimeMinutes) {
+        this.parkingTimeMinutes = parkingTimeMinutes;
+    }
 
     public VehicleType getVehicleType() {
         return vehicleType;

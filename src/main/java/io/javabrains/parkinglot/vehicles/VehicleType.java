@@ -1,7 +1,7 @@
 package io.javabrains.parkinglot.vehicles;
 
 public enum VehicleType {
-    TWO_WHEELER,
+    BIKE,
     COMPACT,
     LARGE,
     SUV,

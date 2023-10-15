@@ -17,14 +17,15 @@ public class App {
                     new ParkingSpace(ParkingSpaceType.COMPACT, true),
                     new ParkingSpace(ParkingSpaceType.LARGE, false),
                     new ParkingSpace(ParkingSpaceType.TRUCK, true),
-                    new ParkingSpace(ParkingSpaceType.TWO_WHEELER, true)
+                    new ParkingSpace(ParkingSpaceType.BIKE, true)
             )
         );
 
-        parkingLot.park(VehicleFactory.createVehicle(VehicleType.COMPACT, false));
-        parkingLot.park(VehicleFactory.createVehicle(VehicleType.SUV, true));
-        parkingLot.park(VehicleFactory.createVehicle(VehicleType.COMPACT, true));
-        parkingLot.park(VehicleFactory.createVehicle(VehicleType.LARGE, false));
+        parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.BIKE, false));
+        parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.COMPACT, false));
+        parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.SUV, true));
+        parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.COMPACT, true));
+        parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.LARGE, false));
 
         System.out.println(parkingLot);
     }
