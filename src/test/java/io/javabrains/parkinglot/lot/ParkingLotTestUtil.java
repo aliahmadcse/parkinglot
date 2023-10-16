@@ -77,7 +77,7 @@ public class ParkingLotTestUtil
   {
     for (Vehicle v : this.vehicles)
     {
-      this.parkingLot.getParkingAttendant().park(v);
+      this.parkingLot.park(v);
     }
     return this;
   }

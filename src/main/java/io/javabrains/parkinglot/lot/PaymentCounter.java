@@ -1,18 +1,39 @@
 package io.javabrains.parkinglot.lot;
 
-public class PaymentCounter {
+public class PaymentCounter
+{
 
-    private long totalCash;
+  private long totalCash;
 
-    public long getTotalCash() {
-        return totalCash;
+  public long getTotalCash()
+  {
+    return totalCash;
+  }
+
+  public void pay(int amount)
+  {
+    totalCash += amount;
+  }
+
+  public int calculateCost(int minutes)
+  {
+    int cost = 0;
+    while (minutes >= 1440)
+    {
+      cost += 500;
+      minutes -= 1440;
     }
 
-    public void pay(int amount) {
-
+    if (minutes > 180)
+    {
+      cost += minutes;
     }
 
-    public int calculateCost(int minutes) {
-        return 0;
+    if (minutes <= 180)
+    {
+      cost += minutes * 2;
     }
+
+    return cost;
+  }
 }

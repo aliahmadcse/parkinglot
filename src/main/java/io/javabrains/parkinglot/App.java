@@ -31,11 +31,11 @@ public class App
             )
     );
 
-    parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.BIKE, false));
-    parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.COMPACT, false));
-    parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.SUV, true));
-    parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.COMPACT, true));
-    parkingLot.getParkingAttendant().park(VehicleFactory.createVehicle(VehicleType.LARGE, false));
+    parkingLot.park(VehicleFactory.createVehicle(VehicleType.BIKE, false));
+    parkingLot.park(VehicleFactory.createVehicle(VehicleType.COMPACT, false));
+    parkingLot.park(VehicleFactory.createVehicle(VehicleType.SUV, true));
+    parkingLot.park(VehicleFactory.createVehicle(VehicleType.COMPACT, true));
+    parkingLot.park(VehicleFactory.createVehicle(VehicleType.LARGE, false));
 
     System.out.println(parkingLot);
   }

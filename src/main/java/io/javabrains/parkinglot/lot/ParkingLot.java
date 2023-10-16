@@ -35,8 +35,19 @@ public class ParkingLot
   public void setParkingSpaces(List<ParkingSpace> parkingSpaces)
   {
     this.parkingSpaces = parkingSpaces;
-    this.parkingAttendant.setParkingSpaces(parkingSpaces);
   }
+
+  public boolean park(Vehicle vehicle)
+  {
+    boolean parked = parkingAttendant.park(vehicle, parkingSpaces);
+    if (parked)
+    {
+      int cost = paymentCounter.calculateCost(vehicle.getParkingTimeMinutes());
+      paymentCounter.pay(cost);
+    }
+    return parked;
+  }
+
 
 
   @Override
