@@ -42,7 +42,23 @@ public class ParkingLot
   @Override
   public String toString()
   {
-    return "";
+    StringBuilder sb = new StringBuilder();
+
+    for (ParkingSpace parkingSpace : parkingSpaces)
+    {
+      if (parkingSpace.getVehicle() == null)
+      {
+        sb.append("(").append(parkingSpace.getParkingSpaceType().name().charAt(0)).append(")");
+        sb.append("|______|").append("      ");
+      }
+      else
+      {
+        sb.append("(").append(parkingSpace.getParkingSpaceType().name().charAt(0)).append(")");
+        sb.append("|__").append(parkingSpace.getVehicle().getVehicleType().name()).append("__|").append("      ");
+      }
+    }
+
+    return sb.toString();
   }
 
 
