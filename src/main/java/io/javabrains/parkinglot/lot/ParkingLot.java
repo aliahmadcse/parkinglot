@@ -5,33 +5,45 @@ import io.javabrains.parkinglot.vehicles.Vehicle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingLot {
+public class ParkingLot
+{
 
-    private List<ParkingSpace> parkingSpaces = new ArrayList<>();
-    private PaymentCounter paymentCounter = new PaymentCounter();
-    private ParkingAttendant parkingAttendant;
+  private List<ParkingSpace> parkingSpaces = new ArrayList<>();
+  private PaymentCounter paymentCounter = new PaymentCounter();
+  private final ParkingAttendant parkingAttendant;
 
-    public ParkingAttendant getParkingAttendant() {
-        return parkingAttendant;
-    }
+  public ParkingLot()
+  {
+    this.parkingAttendant = new ParkingAttendant();
+  }
 
-    public PaymentCounter getPaymentCounter() {
-        return paymentCounter;
-    }
+  public ParkingAttendant getParkingAttendant()
+  {
+    return parkingAttendant;
+  }
 
-    public List<ParkingSpace> getParkingSpaces() {
-        return parkingSpaces;
-    }
+  public PaymentCounter getPaymentCounter()
+  {
+    return paymentCounter;
+  }
 
-    public void setParkingSpaces(List<ParkingSpace> parkingSpaces) {
-        this.parkingSpaces = parkingSpaces;
-    }
+  public List<ParkingSpace> getParkingSpaces()
+  {
+    return parkingSpaces;
+  }
+
+  public void setParkingSpaces(List<ParkingSpace> parkingSpaces)
+  {
+    this.parkingSpaces = parkingSpaces;
+    this.parkingAttendant.setParkingSpaces(parkingSpaces);
+  }
 
 
-    @Override
-    public String toString() {
-        return "";
-    }
+  @Override
+  public String toString()
+  {
+    return "";
+  }
 
 
 }

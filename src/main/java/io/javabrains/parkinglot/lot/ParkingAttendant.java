@@ -4,9 +4,23 @@ import io.javabrains.parkinglot.vehicles.Vehicle;
 
 import java.util.List;
 
-public class ParkingAttendant {
+public class ParkingAttendant
+{
 
-    public boolean park(Vehicle vehicle) {
-        return false;
-    }
+  private List<ParkingSpace> parkingSpaces;
+
+  public List<ParkingSpace> getParkingSpaces()
+  {
+    return parkingSpaces;
+  }
+
+  public void setParkingSpaces(List<ParkingSpace> parkingSpaces)
+  {
+    this.parkingSpaces = parkingSpaces;
+  }
+
+  public boolean park(Vehicle vehicle)
+  {
+    return false;
+  }
 }
